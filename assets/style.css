@@ -1,0 +1,206 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --green-main: #73c93d;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --blue-hover: #017df7;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    /* --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+        'Courier New', monospace; */
+    --font: 'Roboto', 'HelveticaNeue', 'Helvetica Neue', sans-serif;
+    /* --font: 'gotham'; */
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1124px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* header */
+#header {
+    padding-top: 20px;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 27px 0 17px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.header__logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.header__logo-text {
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+    font-weight: 500;
+    vertical-align: middle;
+    color: #73c93d;
+    letter-spacing: 3px;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+#navbar li a {
+    padding: 10px 15px;
+    color: #405263;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.navbar--selected {
+    color: #73c93d !important;
+    border: 1px solid #73c93d;
+    border-radius: 8px;
+}
+
+.header__banner {
+    width: 100%;
+    height: 354px;
+    background-image: url('./img/banner-w.png');
+    background-position: 50% 100%;
+    background-size: cover;
+    margin-top: 12px;
+}
+
+/* product */
+.product__title {
+    text-transform: uppercase;
+    color: #071e55;
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-top: 90px;
+    margin-bottom: 95px;
+}
+
+.product__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 115px 32px;
+}
+
+.product__item {
+    position: relative;
+    padding: 0 25px 25px;
+    border: 1px solid #e5efff;
+    background-color: #fefefe;
+    border-radius: 7px;
+    transition: all 0.5s;
+}
+
+.product__item:hover {
+    /* color: var(--blue-hover); */
+    transform: scale(1.025);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.product__image > img {
+    /* position: absolute;
+    transform: translateY(-50%);
+    top: 50%; */
+    max-width: 110px;
+    border-radius: 50%;
+    margin-top: -55px;
+}
+
+.product__name {
+    color: var(--green-main);
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    margin-top: 8px;
+    /* padding: 64px 10px 36px 10px;
+    border: 1px solid #e5efff;
+    background-color: #fefefe;
+    border-radius: 7px;
+    transition: all 0.5s; */
+}
+
+.product__name:hover {
+    border-color: var(--green-main);
+    color: var(--blue-hover);
+    /* transform: scale(1.025);
+    transition: all 0.5s;
+    cursor: pointer; */
+}
