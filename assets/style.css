@@ -1,5 +1,6 @@
 :root {
     --blue: #007bff;
+    --blue-main: #071e55;
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #e83e8c;
@@ -49,6 +50,7 @@ html {
 
 body {
     box-sizing: border-box;
+    width: 100vw;
 }
 
 a {
@@ -72,6 +74,16 @@ img {
     vertical-align: middle;
 }
 
+table {
+    text-indent: initial;
+    border-spacing: 2px;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: inherit;
+}
+
 .container {
     max-width: 1124px;
     width: 100%;
@@ -81,6 +93,21 @@ img {
 /* header */
 #header {
     padding-top: 20px;
+    /* position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    padding-bottom: 10px; */
+}
+
+.header__fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    padding-bottom: 10px;
 }
 
 .header__container {
@@ -157,6 +184,7 @@ img {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 115px 32px;
+    margin-bottom: 70px;
 }
 
 .product__item {
@@ -202,6 +230,69 @@ img {
     border-color: var(--green-main);
     color: var(--blue-hover);
     /* transform: scale(1.025);
-    transition: all 0.5s;
+    transition: scale linear 0.5s;
     cursor: pointer; */
+}
+
+.product__cost-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--blue-main);
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.product__cost-description {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    color: #212529;
+    margin-bottom: 20px;
+}
+
+.product__cost-form {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.product__cost-form > span {
+    color: #212529;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.product__cost-input {
+    border: 1px solid #000;
+}
+
+.product__table {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.product__table-title {
+    border-bottom-width: 2px;
+}
+
+table.table {
+    clear: both;
+    margin-bottom: 6px !important;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dde2e6;
+}
+
+.table-bordered th {
+    border: 1px solid #dee2e6;
+}
+
+.table th {
+    padding: 12px;
 }

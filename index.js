@@ -1,5 +1,7 @@
 import products from './products.js';
 
+// render products
+
 const productList = document.querySelector('.product__list');
 
 const productsHtml = products.map(
@@ -12,3 +14,14 @@ const productsHtml = products.map(
 );
 
 productList.innerHTML = productsHtml.join('');
+
+// handle header display fixed
+
+const HALF_HEADER_HEIGHT = 40;
+const HEADER__FIXED_CLASS = 'header__fixed';
+
+const header = document.getElementById('header');
+document.addEventListener('scroll', () => {
+    if (window.pageYOffset >= HALF_HEADER_HEIGHT) header.classList.add(HEADER__FIXED_CLASS);
+    else header.classList.remove(HEADER__FIXED_CLASS);
+});
