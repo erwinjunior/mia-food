@@ -176,7 +176,7 @@ th {
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 1.2;
-    margin-top: 90px;
+    padding-top: 90px;
     margin-bottom: 95px;
 }
 
@@ -272,11 +272,13 @@ th {
 .product__table {
     max-width: 500px;
     width: 100%;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
 }
 
 .product__table-title {
     border-bottom-width: 2px;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 table.table {
@@ -289,10 +291,29 @@ table.table {
     border-bottom: 2px solid #dde2e6;
 }
 
-.table-bordered th {
+.table-bordered th,
+.table-bordered td {
     border: 1px solid #dee2e6;
 }
 
 .table th {
     padding: 12px;
+}
+
+.product__img {
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 1px solid #fff;
+}
+
+.product__info {
+    padding: 12px;
+}
+
+.product__detail-name {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
 }
