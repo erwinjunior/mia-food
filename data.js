@@ -187,3 +187,28 @@ export const products = [
     //     info: [{ cost: '300.000d', unit: '2kg' }],
     // },
 ];
+
+export const sales = [
+    {
+        title: 'Khuyến mãi COMBO 5 món 250k',
+        image: './assets/img/Combo5mon-250k.jpg',
+        list: [
+            'Khô bò miếng 300gr',
+            'Mực sợi hấp dừa 250gr',
+            'Khô heo cháy tỏi 300gr',
+            'Khô gà lá chanh 300gr',
+            'Da heo tỏi ớt 170gr',
+        ],
+    },
+    {
+        title: 'Khuyến mãi COMBO 5 món 280k',
+        image: './assets/img/Combo5mon-280k.png',
+        list: [
+            'Khô bò miếng 300gr',
+            'Mực sợi hấp dừa 250gr',
+            'Mực cán tẩm vị 250gr',
+            'Khô gà lá chanh 300gr',
+            'Rong biển cháy tỏi 200gr',
+        ],
+    },
+];

@@ -1,4 +1,4 @@
-import { categories, products } from './data.js';
+import { categories, products, sales } from './data.js';
 
 // render categories
 
@@ -55,3 +55,41 @@ const productsHtml = products.map(
 );
 
 productList.innerHTML = productsHtml.join('');
+
+// render sales
+const saleListWrapper = document.querySelector('.sale__list-wrapper');
+const salesHtml = sales.map(
+    (sale) => `<div class="sale__item">
+                    <h3 class="sale__item-title">${sale.title}</h3>
+                    <div class="sale__img">
+                        <img src="${sale.image}" alt="" />
+                    </div>
+                    <ul class="sale__list">
+                        ${sale.list
+                            .map(
+                                (item) => `<li class="sale__item-text">
+                                            <i class="fa-solid fa-check"></i>
+                                            <span>${item}</span>
+                                        </li>`
+                            )
+                            .join('')}
+                            <li><button class="sale__button">Đặt Mua Ngay</button></li>
+                            <li><span>Hoặc mua trên:</span></li>
+                            <li class="sale__online-shopping">
+                                <a href="https://shope.ee/2L1MVcwbVx" target="_blank" class="icon-shopee" title="Đặt hàng trên Shopee">
+                                    <img src="./assets/img/shopee-img.jpg" />
+                                </a>
+                            </li>
+                            <li class="sale__online-shopping">
+                                <a href="https://lazada.vn" target="_blank" class="icon-shopee" title="Đặt hàng trên Shopee">
+                                    <img src="./assets/img/lazada-image.jpg" />
+                                </a>
+                            </li>
+                                
+                    </ul>
+                    
+                </div>`
+);
+// <img src="./assets/img/lazada-image.jpg" />
+// <a href="https://shope.ee/2L1MVcwbVx" target="_blank" class="icon-shopee" title="Đặt hàng trên Shopee"></a>
+saleListWrapper.innerHTML = salesHtml.join('');

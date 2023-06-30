@@ -168,6 +168,10 @@ th {
 }
 
 /* product */
+.products {
+    padding-bottom: 120px;
+}
+
 .product__title {
     text-transform: uppercase;
     color: #071e55;
@@ -316,4 +320,94 @@ table.table {
     display: inline-block;
     margin-bottom: 5px;
     font-size: 1.4rem;
+}
+
+/* sale */
+.sale__banner {
+    background: url(./img/sale_banner.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    padding: 90px 0;
+}
+
+.sale__overlay {
+    width: 100%;
+    background: #252525;
+    opacity: 0.45;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.sale__list-wrapper {
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    max-width: calc(175% / 3);
+    padding: 0 0 30px 0;
+}
+
+.sale__img {
+    margin-bottom: 50px;
+}
+
+.sale__item {
+    padding: 30px 40px 50px;
+}
+
+.sale__item-text i {
+    color: var(--green-main);
+    font-size: 1.8rem;
+}
+
+.sale__item-text span {
+    display: inline-block;
+    margin-left: 2px;
+    font-size: 1.7rem;
+    line-height: 26px;
+    margin-bottom: 8px;
+}
+
+.sale__item-title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.sale__button {
+    display: inline-block;
+    color: #fff;
+    background-color: var(--cyan);
+    padding: 6px 12px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.sale__list li span {
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 8px 0;
+}
+
+.sale__list li img {
+    width: 53px;
+    height: 60px;
+}
+
+.sale__online-shopping {
+    display: inline-block;
+}
+
+.sale__online-shopping + .sale__online-shopping {
+    margin-left: 5px;
 }
