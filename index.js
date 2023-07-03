@@ -46,7 +46,7 @@ const productsHtml = products.map(
                 ${product.info.map(
                     (item) => `<div>
                 <input type="checkbox" />
-                     <span class="product__">${item.cost} - ${item.unit}</span>
+                     <span class="product__cost">${item.cost} - ${item.unit}</span>
             </div>`
                 )}
                 

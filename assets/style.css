@@ -316,6 +316,10 @@ table.table {
     padding: 12px;
 }
 
+.product__info > div span {
+    font-size: 1.4rem;
+}
+
 .product__detail-name {
     display: inline-block;
     margin-bottom: 5px;
@@ -334,7 +338,8 @@ table.table {
     padding: 90px 0;
 }
 
-.sale__overlay {
+.sale__overlay,
+.policy__overlay {
     width: 100%;
     background: #252525;
     opacity: 0.45;
@@ -410,4 +415,41 @@ table.table {
 
 .sale__online-shopping + .sale__online-shopping {
     margin-left: 5px;
+}
+
+/* policy */
+.policy__banner {
+    background: url('./img/bg02.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    padding: 90px 0;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.3);
+        -ms-transform: scale(0.3);
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    70% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
 }
