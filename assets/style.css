@@ -10,6 +10,7 @@
     --yellow: #ffc107;
     --green: #28a745;
     --green-main: #73c93d;
+    --green-secondary: #1ca817;
     --teal: #20c997;
     --cyan: #17a2b8;
     --white: #fff;
@@ -474,7 +475,7 @@ table.table {
 }
 
 .policy__star {
-    color: #1ca817;
+    color: var(--green-secondary);
     font-size: 2.2rem;
     font-weight: 400;
 }
@@ -484,7 +485,7 @@ table.table {
     font-size: 2.2rem;
     font-weight: 400;
     line-height: 26.4px;
-    color: #1ca817;
+    color: var(--green-secondary);
     letter-spacing: 1px;
     margin-top: 10px;
     margin-bottom: 40px;
@@ -552,6 +553,7 @@ table.table {
 }
 
 .reason__item {
+    background-color: #fff;
     border: 1px solid var(--border);
     border-radius: 8px;
     overflow: hidden;
@@ -590,4 +592,32 @@ table.table {
     font-weight: 400;
     color: #7c8595;
     padding: 0 10px;
+}
+
+/* contact */
+.contact__container {
+    position: relative;
+    padding: 40px;
+    background-color: #fff;
+    margin-top: 115px;
+}
+
+.contact__heading {
+    text-transform: uppercase;
+    color: var(--green-secondary);
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.contact__list {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.contact__item img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
 }
