@@ -161,10 +161,21 @@ span {
     letter-spacing: 1px;
 }
 
+#navbar li a:hover {
+    color: var(--green-main);
+    transition: all 0.5s ease;
+}
+
 .navbar--selected {
     color: #73c93d !important;
     border: 1px solid #73c93d;
     border-radius: 8px;
+}
+
+.navbar--selected:hover {
+    color: #fff !important;
+    background-color: var(--green-main);
+    transition: all 0.5s ease;
 }
 
 .header__banner {
@@ -620,4 +631,105 @@ table.table {
     width: 55px;
     height: 55px;
     object-fit: cover;
+}
+
+/* footer */
+
+.footer__contact {
+    background-color: #fafbfc;
+    padding-top: 85px;
+    padding-bottom: 60px;
+}
+
+.footer__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer__item {
+    padding: 0 15px;
+    text-align: center;
+}
+
+.footer__icon {
+    color: var(--green-main);
+    margin-bottom: 35px;
+}
+
+.footer__icon > i {
+    font-size: 6rem;
+}
+
+.footer__description > li {
+    font-size: 1.6rem;
+    line-height: 24px;
+    color: #454545;
+    margin-bottom: 5px;
+}
+
+.footer__description > li > span {
+    color: var(--green-main);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer__description--transtition > li:hover {
+    color: var(--green-main);
+    text-decoration: underline;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.footer__heading {
+    color: var(--blue-main);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.footer__policy {
+    padding: 40px 0;
+}
+
+.footer__policy-text {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: var(--green-main);
+}
+
+.footer__policy-text span:hover {
+    color: var(--blue-hover);
+    cursor: pointer;
+}
+
+.footer__policy-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+    margin-top: 25px;
+}
+
+.footer__policy-info {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.footer__policy-info > li {
+    color: #454545;
+    font-size: 1.4rem;
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+
+.footer__policy-version {
+    text-align: center;
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 24px;
+    color: #999;
+    margin-bottom: 5px;
 }
