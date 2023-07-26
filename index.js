@@ -93,3 +93,17 @@ const salesHtml = sales.map(
 // <img src="./assets/img/lazada-image.jpg" />
 // <a href="https://shope.ee/2L1MVcwbVx" target="_blank" class="icon-shopee" title="Đặt hàng trên Shopee"></a>
 saleListWrapper.innerHTML = salesHtml.join('');
+
+// scroll sale list wrapper
+const saleButton = document.querySelector('a[href="#khuyenmai"]');
+const saleElement = document.querySelector('.sale');
+saleButton.addEventListener('click', () => {
+    saleElement.scrollIntoView({ behavior: 'smooth' });
+});
+
+// scroll categories list
+const productButton = document.querySelector('a[href="#menu"]');
+const productsCostElement = document.querySelector('.product__cost-wrapper');
+productButton.addEventListener('click', () => {
+    productsCostElement.scrollIntoView({ behavior: 'smooth' });
+});
