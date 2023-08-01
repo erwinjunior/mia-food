@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./assets/style.css" />
+        <title>miafood.vn/donhang</title>
+    </head>
+    <body>
+        <header id="header">
+            <div class="container">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="./assets/img/logo1.png" class="logo" alt="logo" />
+                        </a>
+                        <span class="header__logo-text">MIAFOOD</span>
+                    </div>
+
+                    <ul id="navbar">
+                        <li><a href="banggia.html">BẢNG GIÁ</a></li>
+                        <li>
+                            <a href="index.html">SẢN PHẨM</a>
+                        </li>
+                        <li><a href="#khuyenmai">KHUYẾN MÃI</a></li>
+                        <li>
+                            <a class="navbar--selected" href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="order__overlay"></div>
+            <div class="container">
+                <form class="order__dialog">
+                    <div class="order__dialog-content">
+                        <div class="order__dialog-header">
+                            <h5>Đăng Nhập</h5>
+                            <div class="order__dialog-icon">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                        <div class="order__dialog-body">
+                            <div class="order__dialog-form">
+                                <span>Số điện thoại</span>
+                                <input type="text" placeholder="Nhập số điện thoại của bạn" />
+                            </div>
+                            <div class="order__dialog-form form--relative">
+                                <span>Mã xác minh</span>
+                                <input type="text" placeholder="Nhập mã xác minh" />
+                                <a href="#!">Gửi mã</a>
+                            </div>
+                        </div>
+                        <div class="order__dialog-footer">
+                            <button class="order__dialog-button order__dialog-button--otp">
+                                Đăng nhập với OTP
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="order__dialog-footer">
+                            <a
+                                href="/zalo/login.aspx?callback=don-hang"
+                                class="order__dialog-button order__dialog-button--zalo"
+                                >Đăng nhập với Zalo</a
+                            >
+                        </div>
+                        <div class="order__dialog-footer">
+                            <a
+                                href="/google/login.aspx?callback=don-hang"
+                                class="order__dialog-button order__dialog-button--google"
+                                >Đăng nhập với Google</a
+                            >
+                        </div>
+                        <div class="order__dialog-footer">
+                            <a
+                                href="/facebook/login.aspx?callback=don-hang"
+                                class="order__dialog-button order__dialog-button--facebook"
+                                >Đăng nhập với Facebook</a
+                            >
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="footer__contact">
+                <div class="container">
+                    <div class="footer__list">
+                        <div class="footer__item">
+                            <div class="footer__icon">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <ul class="footer__description">
+                                <li><span>KHO MIAFOOD</span></li>
+                                <li>Email: <span>contact@miafood.com</span></li>
+                                <li>Hotline : <span>0869918618</span></li>
+                                <li>GPKD: 0317513434</li>
+                                <li>SỐ ATVSTP: GOODVNA07122.HACCP</li>
+                            </ul>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__icon">
+                                <i class="fa-regular fa-comment-dots"></i>
+                            </div>
+                            <h5 class="footer__heading">Sản phẩm</h5>
+                            <ul class="footer__description footer__description--transtition">
+                                <li>Đồ ăn vặt</li>
+                                <li>Khô tẩm vị</li>
+                                <li>Bánh các loại</li>
+                                <li>Kẹo các loại</li>
+                                <li>Các loại đậu</li>
+                                <li>Hạt dinh dưỡng</li>
+                                <li>Trái cây sấy</li>
+                                <li>Mứt các loại</li>
+                            </ul>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__icon">
+                                <i class="fa-solid fa-link"></i>
+                            </div>
+                            <h5 class="footer__heading">Liên kết</h5>
+                            <ul class="footer__description footer__description--transtition">
+                                <li>Fan Page</li>
+                                <li>Zalo Official</li>
+                                <li>Zalo nhóm sỉ</li>
+                                <li>Bảng giá sỉ</li>
+                                <li>Bảng giá lẻ</li>
+                                <li>Shopee</li>
+                                <li>Lazada</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__policy">
+                <div class="container">
+                    <div class="footer__policy-text">
+                        <span style="margin-right: 125px">chính sách bảo mật</span>
+                        <span>quy chế hoạt động</span>
+                    </div>
+                    <div class="footer__policy-logo">
+                        <div>
+                            <img src="./assets/img/logoSaleNoti.png" alt="" style="width: 160px !important" />
+                        </div>
+                        <div>
+                            <img src="./assets/img/haccp.jpg" alt="" style="width: 80px !important" />
+                        </div>
+                    </div>
+                    <ul class="footer__policy-info">
+                        <li>CÔNG TY TNHH TMDV THỰC PHẨM MINH ANH</li>
+                        <li>Địa chỉ: 56 Bis Trương Đình Hội, Phường 16, Quận 8, Thành Phố Hồ Chí Minh, Việt Nam.</li>
+                        <li>Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Thị Anh Thư - Điện thoại liên hệ: 0869918618</li>
+                        <li>
+                            Mã số doanh nghiệp: 0317513434 do Sở Kế hoạch & Đầu tư TP HCM cấp lần đầu ngày 12/10/2022
+                        </li>
+                        <li>© 2022 - Bản quyền thuộc về CÔNG TY TNHH TMDV THỰC PHẨM MINH ANH</li>
+                    </ul>
+                    <p class="footer__policy-version">Version build: 1.7</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

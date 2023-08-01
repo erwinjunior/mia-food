@@ -890,3 +890,162 @@ tbody {
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
+
+/* theo doi don hang */
+.order__overlay {
+    width: 100%;
+    height: auto;
+    background: #252525;
+    opacity: 0.45;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.order__dialog {
+    position: relative;
+    background-color: #fff;
+    z-index: 2;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.order__dialog-header {
+    background-color: #f5f6f7;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order__dialog-header > h5 {
+    display: contents;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--blue-main);
+}
+
+.order__dialog-icon i {
+    font-size: 16px;
+}
+
+.order__dialog-body {
+    padding: 15px;
+}
+
+.order__dialog-form {
+    margin-bottom: 16px;
+}
+
+.order__dialog-form span {
+    display: block;
+    margin-top: 1px;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.order__dialog-form input {
+    display: block;
+    width: 100%;
+    border: 1px solid #ced4da;
+    box-shadow: none;
+    font-size: 1.3rem;
+    line-height: 32px;
+    height: 32px;
+    padding: 6px 12px;
+}
+
+.form--relative {
+    position: relative;
+}
+
+.order__dialog-form a {
+    position: absolute;
+    right: 0;
+    top: 33px;
+    right: 8px;
+    color: #337ab7;
+    font-size: 1.4rem;
+}
+
+.order__dialog-footer {
+    padding: 8px 10px;
+    border-top: 1px solid #e9ecef;
+}
+
+.order__dialog-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    width: 100%;
+    text-transform: unset;
+    font-size: 1.4rem;
+    text-shadow: unset;
+    text-transform: unset;
+    cursor: pointer;
+    border-radius: 4px;
+    vertical-align: middle;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+
+.order__dialog-button--otp {
+    display: inline-block;
+    color: #fff;
+    background-color: var(--green-main);
+    letter-spacing: 1px;
+}
+
+.order__dialog-button--otp i {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.order__dialog-button--zalo {
+    border: 1px solid #0081c8;
+    color: #0081c8;
+    background: url(./img/zalo-1-logo.png) no-repeat;
+    background-size: 44px;
+    background-position: 0 4px;
+    text-shadow: unset;
+}
+
+.order__dialog-button--zalo:hover {
+    color: #fff;
+    background-color: #0081c8;
+    background-image: none;
+}
+
+.order__dialog-button--google {
+    color: #e54335;
+    border: 1px solid #e54335;
+    background: url(./img/Google_Icons-512.png) no-repeat;
+    background-size: 48px;
+    background-position: -4px -4px;
+}
+
+.order__dialog-button--google:hover {
+    color: #fff;
+    background-color: #e54335;
+    background-image: none;
+}
+
+.order__dialog-button--facebook {
+    color: #1093f4;
+    border: 1px solid #1093f4;
+    background: url(./img/Facebook_icon.png) no-repeat;
+    background-size: 32px;
+    background-position: 4px 4px;
+}
+
+.order__dialog-button--facebook:hover {
+    color: #fff;
+    background-color: #1093f4;
+    background-image: none;
+}
