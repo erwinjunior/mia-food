@@ -107,3 +107,12 @@ const productsCostElement = document.querySelector('.product__cost-wrapper');
 productButton.addEventListener('click', () => {
     productsCostElement.scrollIntoView({ behavior: 'smooth' });
 });
+
+// handle scroll-x order cart
+const cart = document.querySelector('.menu_right .cart');
+const orderCart = document.querySelector('.ordercart');
+
+cart.addEventListener('click', () => {
+    const orderCartCoordinateX = orderCart.getBoundingClientRect().x;
+    orderCart.style.transform = `translateX(${orderCartCoordinateX !== 0 ? 0 : '-100%'})`;
+});
