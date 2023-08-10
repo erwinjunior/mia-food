@@ -95,24 +95,66 @@ const salesHtml = sales.map(
 saleListWrapper.innerHTML = salesHtml.join('');
 
 // scroll sale list wrapper
-const saleButton = document.querySelector('a[href="#khuyenmai"]');
-const saleElement = document.querySelector('.sale');
-saleButton.addEventListener('click', () => {
-    saleElement.scrollIntoView({ behavior: 'smooth' });
-});
+// const saleButton = document.querySelector('a[href="#khuyenmai"]');
+// const saleElement = document.querySelector('.sale');
+// saleButton.addEventListener('click', () => {
+//     saleElement.scrollIntoView({ behavior: 'smooth' });
+// });
 
 // scroll categories list
-const productButton = document.querySelector('a[href="#menu"]');
-const productsCostElement = document.querySelector('.product__cost-wrapper');
-productButton.addEventListener('click', () => {
-    productsCostElement.scrollIntoView({ behavior: 'smooth' });
-});
+// const productButton = document.querySelector('a[href="#menu"]');
+// const productsCostElement = document.querySelector('.product__cost-wrapper');
+// productButton.addEventListener('click', () => {
+//     productsCostElement.scrollIntoView({ behavior: 'smooth' });
+// });
 
 // handle scroll-x order cart
 const cart = document.querySelector('.menu_right .cart');
 const orderCart = document.querySelector('.ordercart');
 
-cart.addEventListener('click', () => {
+const closeOrderCart = () => {
     const orderCartCoordinateX = orderCart.getBoundingClientRect().x;
     orderCart.style.transform = `translateX(${orderCartCoordinateX !== 0 ? 0 : '-100%'})`;
+};
+
+cart.addEventListener('click', () => {
+    closeOrderCart();
 });
+
+// handle close order cart
+const orderCartCloseBtn = document.querySelector('.container1 .btn-dark');
+orderCartCloseBtn.addEventListener('click', () => {
+    closeOrderCart();
+});
+
+// handle transition contract box
+const contactIcon = document.querySelector('.contact_icon');
+const contactBox = document.querySelector('.contact_box');
+contactIcon.addEventListener('click', () => {
+    const contactBoxX = contactBox.getBoundingClientRect().x;
+    const clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+    // console.log({ contactBoxX, clientWidth });
+    if (contactBoxX <= clientWidth) {
+        contactBox.style.right = 'calc(-100% - 10px)';
+        contactIcon.style.transform = `rotateY(2turn)`;
+    } else {
+        contactBox.style.right = '75px';
+        contactIcon.style.transform = `rotateY(1turn)`;
+    }
+});
+
+// handle checked checkbox product
+const checkboxProducts = document.querySelectorAll('.product__info input');
+const cartQuantity = document.querySelector('.cart .quantity');
+checkboxProducts.forEach((checkboxProduct) => {
+    checkboxProduct.addEventListener('change', () => {
+        const checked = checkboxProduct.checked;
+        const quantity = cartQuantity.textContent;
+
+        // if checked => quantity += 1 else quantity -= 1
+        cartQuantity.textContent = (Number(quantity) + (checked ? 1 : -1)).toString();
+    });
+});
+
+// render order product
+const orderProducts = [];

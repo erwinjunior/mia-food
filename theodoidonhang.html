@@ -23,7 +23,7 @@
     <body>
         <header id="header">
             <div class="container">
-                <div class="header__container">
+                <div class="header__container" style="padding: 0 15px">
                     <div class="header__logo">
                         <a href="#">
                             <img src="./assets/img/logo1.png" class="logo" alt="logo" />
@@ -45,9 +45,9 @@
             </div>
         </header>
         <main>
-            <div class="order__overlay"></div>
+            <div class="order__overlay" style="display: none"></div>
             <div class="container">
-                <form class="order__dialog">
+                <form class="order__dialog" style="display: none">
                     <div class="order__dialog-content">
                         <div class="order__dialog-header">
                             <h5>Đăng Nhập</h5>
@@ -95,6 +95,119 @@
                         </div>
                     </div>
                 </form>
+            </div>
+            <div class="order">
+                <div class="container">
+                    <div class="order__container">
+                        <div class="order__user-info">
+                            <div class="order__description">
+                                <i class="fa-solid fa-id-card"></i>
+                                <span class="order__heading">thông tin tài khoản</span>
+                            </div>
+                            <div class="order__avt">
+                                <img src="./assets/img/riin-raiden.jpg" alt="" />
+                            </div>
+                            <h5 class="order__name">Họ tên: Bảo Nguyễn Đình</h5>
+                            <h5 class="order__id-user">ID: 230803000001</h5>
+                            <button class="order__btn-sign-out"><i class="fa-solid fa-power-off"></i>Đăng xuất</button>
+                        </div>
+                        <div class="order__history">
+                            <div class="order__description">
+                                <i class="fa-solid fa-clipboard"></i>
+                                <span class="order__heading">lịch sử đơn hàng</span>
+                            </div>
+                            <div class="order__detail">
+                                <span>Chọn ngày kết xuất dữ liệu</span>
+                                <div class="order__detail-input">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Date Range(MM/DD/YYYY)"
+                                        id="calendar"
+                                        disabled
+                                    />
+                                    <button class="order__calendar-icon">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                    </button>
+                                </div>
+                                <div id="order__calendar"></div>
+                                <div class="order__search">
+                                    <span>Search:</span>
+                                    <input type="text" />
+                                </div>
+                                <div class="order__table">
+                                    <table
+                                        class="table table-striped table-bordered table-hover dataTable"
+                                        id="tbl_datatable"
+                                        aria-describedby="tbl_datatable_info"
+                                    >
+                                        <thead>
+                                            <tr role="row">
+                                                <th
+                                                    class="sorting_asc"
+                                                    role="columnheader"
+                                                    tabindex="0"
+                                                    aria-controls="tbl_datatable"
+                                                    rowspan="1"
+                                                    colspan="1"
+                                                    aria-sort="ascending"
+                                                    aria-label="TT: activate to sort column descending"
+                                                    style="width: 50.2px; background-color: #fff; color: #000"
+                                                >
+                                                    TT
+                                                </th>
+                                                <th
+                                                    class="sorting"
+                                                    role="columnheader"
+                                                    tabindex="0"
+                                                    aria-controls="tbl_datatable"
+                                                    rowspan="1"
+                                                    colspan="1"
+                                                    aria-label="SẢN PHẨM: activate to sort column ascending"
+                                                    style="width: 147.4px; background-color: #fff; color: #000"
+                                                >
+                                                    SẢN PHẨM
+                                                </th>
+                                                <th
+                                                    class="sorting"
+                                                    role="columnheader"
+                                                    tabindex="0"
+                                                    aria-controls="tbl_datatable"
+                                                    rowspan="1"
+                                                    colspan="1"
+                                                    aria-label="THÔNG TIN ĐƠN HÀNG: activate to sort column ascending"
+                                                    style="width: 292.4px; background-color: #fff; color: #000"
+                                                >
+                                                    THÔNG TIN ĐƠN HÀNG
+                                                </th>
+                                                <th
+                                                    class="sorting"
+                                                    role="columnheader"
+                                                    tabindex="0"
+                                                    aria-controls="tbl_datatable"
+                                                    rowspan="1"
+                                                    colspan="1"
+                                                    aria-label="THÔNG TIN NHẬN HÀNG: activate to sort column ascending"
+                                                    style="width: 308.2px; background-color: #fff; color: #000"
+                                                >
+                                                    THÔNG TIN NHẬN HÀNG
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody role="alert" aria-live="polite" aria-relevant="all">
+                                            <tr class="odd">
+                                                <td valign="top" colspan="4" class="dataTables_empty">
+                                                    Không tìm thấy dữ liệu
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <footer id="footer">
@@ -175,5 +288,16 @@
             </div>
         </footer>
         <script src="./script/theodoidonhang.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/index.global.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.8/index.global.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const calendarEl = document.getElementById('order__calendar');
+                const calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                });
+                calendar.render();
+            });
+        </script>
     </body>
 </html>

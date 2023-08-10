@@ -34,7 +34,7 @@
 
                     <ul id="navbar">
                         <li><a href="banggia.html">BẢNG GIÁ</a></li>
-                        <li><a class="navbar--selected" href="#sapham">SẢN PHẨM</a></li>
+                        <li><a class="navbar--selected" href="#sanpham">SẢN PHẨM</a></li>
                         <li><a href="#khuyenmai">KHUYẾN MÃI</a></li>
                         <li><a href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a></li>
                     </ul>
@@ -43,7 +43,7 @@
         </header>
         <div class="header__banner"></div>
         <main style="background-color: #f7fafa; overflow: hidden">
-            <div class="products">
+            <div class="products" id="sanpham">
                 <div class="container">
                     <div class="product__container">
                         <h3 class="product__title">các loại sản phẩm</h3>
@@ -111,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            <div class="sale">
+            <div class="sale" id="khuyenmai">
                 <div class="sale__banner">
                     <div class="sale__overlay"></div>
                     <div class="container">
@@ -379,6 +379,7 @@
                 </a>    
             </div>
             <div class="ordercart" >
+                <div class="order__product-list"></div>
                 <form id="frm" method="post" action="javascript:ConfimOder"></form>
                     <table id="tbl_ordercart" class="tabletbl">
                         <thead>
@@ -400,8 +401,33 @@
                             </tr>
                         </thead>
                     <tbody>
-                        <tr>
+                        <!-- <tr>
                             <td colspan="6">Không có sản phẩm!</td>
+                        </tr> -->
+                        <tr class="order__product-item">
+                            <td class="order__product-img">
+                                <img src="./assets/img/muoi-tom-nhu-y-hat-lon.jpg" alt="">
+                            </td>
+                            <td class="order__product-name">Muối tôm Như Ý - hạt lớn</td>
+                            <td class="order__product-weight">400g</td>
+                            <td class="order__product-adjust">
+                                <div>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                                <div style="margin: 6px 0">
+                                    <span class="order__product-quantity">1</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </td>
+                            <td class="order__product-cost">40.000đ</td>
+                            <td class="order__product-total">40.000đ
+                                <br>
+                                <a href="" class="order__remove">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </a>
+                            </td>
                         </tr>
                     </tbody>
                     <tfoot>

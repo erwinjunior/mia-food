@@ -4,6 +4,10 @@ closeModalIcon.addEventListener('click', () => {
     window.location.href = 'index.html';
 });
 
+// handle scorll down order dialog
+
 const orderDialog = document.querySelector('.order__dialog');
-console.log(orderDialog);
+if (window.location.href !== 'theodoidonhang.html') orderDialog.style.transform = `translateY(calc(-100% - 40px))`;
+
+// console.log(orderDialog);
 orderDialog.style.transform = `translateY(calc(40px))`;
