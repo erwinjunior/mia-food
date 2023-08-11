@@ -18,12 +18,28 @@
             referrerpolicy="no-referrer"
         />
         <link rel="stylesheet" href="./assets/style.css" />
+        <link rel="stylesheet" href="./assets/responsive.css" />
         <title>miafood.vn/donhang</title>
     </head>
     <body>
         <header id="header">
+            <input hidden type="checkbox" checked class="header__checkbox" id="header__sidebar-checkbox" />
+            <div class="mobile-sidebar-wrapper">
+                <div class="container">
+                    <ul id="mobile-sidebar">
+                        <li><a href="banggia.html">BẢNG GIÁ</a></li>
+                        <li>
+                            <a href="index.html#sanpham">SẢN PHẨM</a>
+                        </li>
+                        <li><a href="index.html#khuyenmai">KHUYẾN MÃI</a></li>
+                        <li class="mobile-navbar--selected">
+                            <a class="navbar--selected" href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="container">
-                <div class="header__container" style="padding: 0 15px">
+                <div class="header__container">
                     <div class="header__logo">
                         <a href="#">
                             <img src="./assets/img/logo1.png" class="logo" alt="logo" />
@@ -33,14 +49,18 @@
 
                     <ul id="navbar">
                         <li><a href="banggia.html">BẢNG GIÁ</a></li>
-                        <li>
-                            <a href="index.html">SẢN PHẨM</a>
-                        </li>
-                        <li><a href="#khuyenmai">KHUYẾN MÃI</a></li>
-                        <li>
-                            <a class="navbar--selected" href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a>
-                        </li>
+                        <li><a href="index.html#sanpham">SẢN PHẨM</a></li>
+                        <li><a href="index.html#khuyenmai">KHUYẾN MÃI</a></li>
+                        <li><a class="navbar--selected" href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a></li>
                     </ul>
+
+                    <label for="header__sidebar-checkbox" class="header__bars">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+
+                    <!-- <div class="mobile-sidebar-wrapper">
+                        
+                    </div> -->
                 </div>
             </div>
         </header>

@@ -120,10 +120,12 @@ span {
 }
 
 .header__container {
+    position: relative;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 27px 0 17px;
+    padding: 0 15px;
 }
 
 .header__logo {

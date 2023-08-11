@@ -18,10 +18,26 @@
             referrerpolicy="no-referrer"
         />
         <link rel="stylesheet" href="./assets/style.css" />
+        <link rel="stylesheet" href="./assets/responsive.css" />
         <title>BẢNG GIÁ SỈ ĐỒ ĂN VẶT MIAFOOD 2023</title>
     </head>
     <body>
         <header id="header">
+            <input hidden type="checkbox" checked class="header__checkbox" id="header__sidebar-checkbox" />
+            <div class="mobile-sidebar-wrapper">
+                <div class="container">
+                    <ul id="mobile-sidebar">
+                        <li class="mobile-navbar--selected">
+                            <a class="navbar--selected" href="banggia.html">BẢNG GIÁ</a>
+                        </li>
+                        <li>
+                            <a href="index.html#sanpham">SẢN PHẨM</a>
+                        </li>
+                        <li><a href="index.html#khuyenmai">KHUYẾN MÃI</a></li>
+                        <li><a href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="container">
                 <div class="header__container">
                     <div class="header__logo">
@@ -32,15 +48,19 @@
                     </div>
 
                     <ul id="navbar">
-                        <li><a class="navbar--selected" href="banggia.html">BẢNG GIÁ</a></li>
-                        <li>
-                            <a href="index.html#sanpham">SẢN PHẨM</a>
-                        </li>
-                        <li><a href="index.html#khuyenmai">KHUYẾN MÃI</a></li>
-                        <li>
-                            <a href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a>
-                        </li>
+                        <li class="navbar--selected"><a href="banggia.html">BẢNG GIÁ</a></li>
+                        <li><a href="index.html#sanpham">SẢN PHẨM</a></li>
+                        <li><a href="#khuyenmai">KHUYẾN MÃI</a></li>
+                        <li><a href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a></li>
                     </ul>
+
+                    <label for="header__sidebar-checkbox" class="header__bars">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+
+                    <!-- <div class="mobile-sidebar-wrapper">
+                        
+                    </div> -->
                 </div>
             </div>
         </header>
