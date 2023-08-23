@@ -158,24 +158,6 @@ checkboxProducts.forEach((checkboxProduct) => {
     });
 });
 
-// handle checkbox header
-const labelBars = document.querySelector('.header__bars');
-const headerCheckbox = document.querySelector('.header__checkbox');
-const mobileSidebarWrapper = document.querySelector('.mobile-sidebar-wrapper');
-const mobileSidebar = document.getElementById('mobile-sidebar');
-const navbar = document.getElementById('navbar');
-const navbarCheckedClass = 'header--checked';
-// labelBars.addEventListener('click', () => {
-//     // headerCheckbox.checked = !headerCheckbox.checked;
-//     // console.log(headerCheckbox.checked);
-//     // mobileSidebarWrapper.style.display = headerCheckbox.checked ? 'block' : 'none';
-//     // mobileSidebarWrapper.style.maxHeight = headerCheckbox.checked ? '100%' : '0px';
-//     // mobileSidebar.style.maxHeight = headerCheckbox.checked ? '100%' : '0px';
-//     const checked = headerCheckbox.checked;
-//     if (checked) navbar.classList.add(navbarCheckedClass);
-//     else navbar.classList.remove(navbarCheckedClass);
-// });
-
 // handle open navbar mobile
 $(document).ready(function () {
     $('.header__bars').on('click', function () {
@@ -205,7 +187,7 @@ const activeNavbarHomePage = (href) => {
     // console.log(href);
 
     if (!href.includes('#')) {
-        document.querySelector('#navbar li a[href="#sanpham"] ').classList.add(navbarActiveClass);
+        navbarsHomePage[0].classList.add(navbarActiveClass);
         return;
     }
 
