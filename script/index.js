@@ -175,8 +175,26 @@ const navbarCheckedClass = 'header--checked';
 //     if (checked) navbar.classList.add(navbarCheckedClass);
 //     else navbar.classList.remove(navbarCheckedClass);
 // });
+
+// handle open navbar mobile
 $(document).ready(function () {
     $('.header__bars').on('click', function () {
         $('#navbar').toggle(300);
+    });
+});
+
+// handle active navbar home page
+const navbarsHomePage = [
+    document.querySelector('#navbar li a[href="#sanpham"] '),
+    document.querySelector('#navbar li a[href="#khuyenmai"] '),
+];
+
+navbarsHomePage.forEach((navbar) => {
+    navbar.addEventListener('click', () => {
+        navbar.classList.add('navbar--selected');
+
+        navbarsHomePage.forEach((item) => {
+            if (item.getAttribute('href') != navbar.getAttribute('href')) item.classList.remove('navbar--selected');
+        });
     });
 });
