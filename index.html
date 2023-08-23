@@ -17,6 +17,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" href="./assets/style.css" />
         <link rel="stylesheet" href="./assets/responsive.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -25,16 +26,6 @@
     <body>
         <header id="header">
             <input hidden type="checkbox" checked class="header__checkbox" id="header__sidebar-checkbox">
-            <div class="mobile-sidebar-wrapper">
-                <div class="container">
-                    <ul id="mobile-sidebar">
-                        <li><a href="banggia.html">BẢNG GIÁ</a></li>
-                        <li class="mobile-navbar--selected"><a class="navbar--selected" href="#sanpham">SẢN PHẨM</a></li>
-                        <li><a href="#khuyenmai">KHUYẾN MÃI</a></li>
-                        <li><a href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="container">
                 <div class="header__container">
                     <div class="header__logo">
@@ -43,6 +34,10 @@
                         </a>
                         <span class="header__logo-text">MIAFOOD</span>
                     </div>
+
+                    <label for="header__sidebar-checkbox" class="header__bars">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
                     
                     <ul id="navbar">
                         <li><a href="banggia.html">BẢNG GIÁ</a></li>
@@ -51,13 +46,18 @@
                         <li><a href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a></li>
                     </ul>
                     
-                    <label for="header__sidebar-checkbox" class="header__bars">
-                        <i class="fa-solid fa-bars"></i>
-                    </label>
+                    
                     
                     
                     <!-- <div class="mobile-sidebar-wrapper">
-                        
+                        <div class="container">
+                            <ul id="mobile-sidebar">
+                                <li><a href="banggia.html">BẢNG GIÁ</a></li>
+                                <li class="mobile-navbar--selected"><a class="navbar--selected" href="#sanpham">SẢN PHẨM</a></li>
+                                <li><a href="#khuyenmai">KHUYẾN MÃI</a></li>
+                                <li><a href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a></li>
+                            </ul>
+                        </div>
                     </div> -->
                     
                 </div>
@@ -350,7 +350,7 @@
                 </div>
             </div>
             <div id="category_list" class="menu_rightlist" >
-                <a href="#menu">
+                <a href="#menu" class="category--active">
                     <img src="./assets/img/hang-nhap-khau.jpg" alt="hàng nhập khẩu">
                     <span>Hàng nhập khẩu</span>
                 </a>
