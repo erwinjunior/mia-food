@@ -189,9 +189,39 @@ const navbarsHomePage = [
     document.querySelector('#navbar li a[href="#khuyenmai"] '),
 ];
 
+const navbarActiveClass = 'navbar--selected';
+
+const activeNavbarHomePage = (href) => {
+    navbarsHomePage.forEach((navbar) => {
+        const navbarHref = navbar.getAttribute('href');
+        // console.log(navbarHref);
+        if (navbarHref.toLowerCase() === href.toLowerCase()) navbar.classList.add(navbarActiveClass);
+    });
+};
+
+// handle active navbar home page reload and change page
+(() => {
+    const href = window.location.href;
+    // console.log(href);
+
+    if (!href.includes('#')) {
+        document.querySelector('#navbar li a[href="#sanpham"] ').classList.add(navbarActiveClass);
+        return;
+    }
+
+    const suffixes = [];
+    for (let i = href.length - 1; i > 0; --i) {
+        if (href[i] === '#') break;
+        else suffixes.unshift(href[i]);
+    }
+    const currentHref = suffixes.join('');
+    // console.log(currentHref);
+    activeNavbarHomePage(`#${currentHref}`);
+})();
+
 navbarsHomePage.forEach((navbar) => {
     navbar.addEventListener('click', () => {
-        navbar.classList.add('navbar--selected');
+        navbar.classList.add(navbarActiveClass);
 
         navbarsHomePage.forEach((item) => {
             if (item.getAttribute('href') != navbar.getAttribute('href')) item.classList.remove('navbar--selected');
