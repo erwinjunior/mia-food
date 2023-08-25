@@ -142,13 +142,13 @@
 }
 
 /* mobile */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 577px) and (max-width: 768px) {
     .container {
         max-width: 540px;
     }
 
     .product__list {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .reason__list,
@@ -161,6 +161,12 @@
     .sale__list-wrapper {
         max-width: 100%;
         margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .product__list {
+        grid-template-columns: 1fr;
     }
 }
 

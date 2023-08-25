@@ -236,12 +236,10 @@ span {
 }
 
 .product__image > img {
-    /* position: absolute;
-    transform: translateY(-50%);
-    top: 50%; */
     max-width: 110px;
     border-radius: 50%;
-    margin-top: -55px;
+    display: flex;
+    margin: -55px auto 0 auto;
 }
 
 .product__name {
