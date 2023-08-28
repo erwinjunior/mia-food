@@ -113,6 +113,12 @@
     .product__list {
         grid-template-columns: 1fr;
     }
+
+    .reason__list,
+    .footer__list {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
 }
 
 @keyframes mobileSidebarWrapperFadeIn {
